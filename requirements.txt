@@ -1,0 +1,6 @@
+# Core TraceLens needs NOTHING beyond Python 3.10+ (standard library only).
+# Optional extras:
+pytest>=7          # run the test-suite
+pandas>=1.5        # only to read Who&When .parquet files
+pyarrow>=12        # only to read Who&When .parquet files
+huggingface_hub    # only to download Who&When
