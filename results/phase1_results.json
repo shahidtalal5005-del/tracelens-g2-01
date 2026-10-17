@@ -1,0 +1,293 @@
+{
+  "benchmark": {
+    "traces": 588,
+    "clean": 48,
+    "faulted": 540,
+    "clean_success_rate": 1.0,
+    "faulted_success_rate": 0.2981,
+    "attribution_eval_set": 379,
+    "mean_events": 16.8,
+    "mean_raw_tokens": 709.8,
+    "fault_effective": {
+      "calc_error": {
+        "effective": 24,
+        "injected": 24
+      },
+      "memory_swap": {
+        "effective": 18,
+        "injected": 24
+      },
+      "plan_omission": {
+        "effective": 18,
+        "injected": 24
+      },
+      "retrieval_miss": {
+        "effective": 65,
+        "injected": 84
+      },
+      "retrieval_miss_transient": {
+        "effective": 0,
+        "injected": 84
+      },
+      "source_error": {
+        "effective": 61,
+        "injected": 84
+      },
+      "tool_corruption": {
+        "effective": 61,
+        "injected": 84
+      },
+      "tool_error": {
+        "effective": 84,
+        "injected": 84
+      },
+      "unsupported_claim": {
+        "effective": 48,
+        "injected": 48
+      }
+    }
+  },
+  "baselines_full_view": [
+    {
+      "method": "random",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.0633,
+      "step_acc_ci95": [
+        0.0429,
+        0.0925
+      ],
+      "hit@3": 0.1873,
+      "mrr": 0.2143,
+      "actor_acc": 0.2507,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0417,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0556,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.1111,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0308,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.1148,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0492,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0357,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 0.1042,
+          "n": 48
+        }
+      },
+      "cost": {}
+    },
+    {
+      "method": "first_step",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.0475,
+      "step_acc_ci95": [
+        0.0302,
+        0.0738
+      ],
+      "hit@3": 0.1003,
+      "mrr": 0.1746,
+      "actor_acc": 0.0475,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 0.0,
+          "n": 48
+        }
+      },
+      "cost": {}
+    },
+    {
+      "method": "last_step",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.1266,
+      "step_acc_ci95": [
+        0.0969,
+        0.1639
+      ],
+      "hit@3": 0.3166,
+      "mrr": 0.2803,
+      "actor_acc": 0.1266,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {}
+    },
+    {
+      "method": "last_tool_output",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.19,
+      "step_acc_ci95": [
+        0.1537,
+        0.2325
+      ],
+      "hit@3": 0.5805,
+      "mrr": 0.4219,
+      "actor_acc": 0.7784,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.3934,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.3934,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 0.0,
+          "n": 48
+        }
+      },
+      "cost": {}
+    },
+    {
+      "method": "first_error_signal",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.3483,
+      "step_acc_ci95": [
+        0.3021,
+        0.3976
+      ],
+      "hit@3": 0.5383,
+      "mrr": 0.4746,
+      "actor_acc": 0.3483,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {}
+    }
+  ],
+  "note": "LLM-judge rows (if present) use the first 60 evaluation traces."
+}

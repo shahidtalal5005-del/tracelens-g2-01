@@ -1,0 +1,1964 @@
+{
+  "benchmark": {
+    "traces": 588,
+    "clean": 48,
+    "faulted": 540,
+    "clean_success_rate": 1.0,
+    "faulted_success_rate": 0.2981,
+    "attribution_eval_set": 379,
+    "mean_events": 16.8,
+    "mean_raw_tokens": 709.8,
+    "fault_effective": {
+      "calc_error": {
+        "effective": 24,
+        "injected": 24
+      },
+      "memory_swap": {
+        "effective": 18,
+        "injected": 24
+      },
+      "plan_omission": {
+        "effective": 18,
+        "injected": 24
+      },
+      "retrieval_miss": {
+        "effective": 65,
+        "injected": 84
+      },
+      "retrieval_miss_transient": {
+        "effective": 0,
+        "injected": 84
+      },
+      "source_error": {
+        "effective": 61,
+        "injected": 84
+      },
+      "tool_corruption": {
+        "effective": 61,
+        "injected": 84
+      },
+      "tool_error": {
+        "effective": 84,
+        "injected": 84
+      },
+      "unsupported_claim": {
+        "effective": 48,
+        "injected": 48
+      }
+    }
+  },
+  "gap1_attribution": [
+    {
+      "method": "random",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.0633,
+      "step_acc_ci95": [
+        0.0429,
+        0.0925
+      ],
+      "hit@3": 0.1873,
+      "mrr": 0.2143,
+      "actor_acc": 0.2507,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0417,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0556,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.1111,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0308,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.1148,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0492,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0357,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 0.1042,
+          "n": 48
+        }
+      },
+      "cost": {}
+    },
+    {
+      "method": "first_step",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.0475,
+      "step_acc_ci95": [
+        0.0302,
+        0.0738
+      ],
+      "hit@3": 0.1003,
+      "mrr": 0.1746,
+      "actor_acc": 0.0475,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 0.0,
+          "n": 48
+        }
+      },
+      "cost": {}
+    },
+    {
+      "method": "last_step",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.1266,
+      "step_acc_ci95": [
+        0.0969,
+        0.1639
+      ],
+      "hit@3": 0.3166,
+      "mrr": 0.2803,
+      "actor_acc": 0.1266,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {}
+    },
+    {
+      "method": "last_tool_output",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.19,
+      "step_acc_ci95": [
+        0.1537,
+        0.2325
+      ],
+      "hit@3": 0.5805,
+      "mrr": 0.4219,
+      "actor_acc": 0.7784,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.3934,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.3934,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 0.0,
+          "n": 48
+        }
+      },
+      "cost": {}
+    },
+    {
+      "method": "first_error_signal",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.3483,
+      "step_acc_ci95": [
+        0.3021,
+        0.3976
+      ],
+      "hit@3": 0.5383,
+      "mrr": 0.4746,
+      "actor_acc": 0.3483,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {}
+    },
+    {
+      "method": "evidence_verifier",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.8391,
+      "step_acc_ci95": [
+        0.7987,
+        0.8726
+      ],
+      "hit@3": 0.934,
+      "mrr": 0.896,
+      "actor_acc": 0.8391,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 1.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.349
+      }
+    }
+  ],
+  "gap1_ablation": [
+    {
+      "method": "evidence_verifier[retrieval,replay,tool_error,memory,calc,claim]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.7916,
+      "step_acc_ci95": [
+        0.7478,
+        0.8294
+      ],
+      "hit@3": 0.8865,
+      "mrr": 0.8558,
+      "actor_acc": 0.7916,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 1.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.279
+      },
+      "ablation": "without plan"
+    },
+    {
+      "method": "evidence_verifier[plan,replay,tool_error,memory,calc,claim]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.8391,
+      "step_acc_ci95": [
+        0.7987,
+        0.8726
+      ],
+      "hit@3": 0.934,
+      "mrr": 0.896,
+      "actor_acc": 0.8391,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 1.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.363
+      },
+      "ablation": "without retrieval"
+    },
+    {
+      "method": "evidence_verifier[plan,retrieval,tool_error,memory,calc,claim]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.6781,
+      "step_acc_ci95": [
+        0.6295,
+        0.7231
+      ],
+      "hit@3": 0.8681,
+      "mrr": 0.7921,
+      "actor_acc": 0.6781,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.065
+      },
+      "ablation": "without replay"
+    },
+    {
+      "method": "evidence_verifier[plan,retrieval,replay,memory,calc,claim]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.6174,
+      "step_acc_ci95": [
+        0.5675,
+        0.6649
+      ],
+      "hit@3": 0.934,
+      "mrr": 0.7483,
+      "actor_acc": 0.6174,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 1.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.471
+      },
+      "ablation": "without tool_error"
+    },
+    {
+      "method": "evidence_verifier[plan,retrieval,replay,tool_error,calc,claim]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.7916,
+      "step_acc_ci95": [
+        0.7478,
+        0.8294
+      ],
+      "hit@3": 0.8865,
+      "mrr": 0.8541,
+      "actor_acc": 0.7916,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 1.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.445
+      },
+      "ablation": "without memory"
+    },
+    {
+      "method": "evidence_verifier[plan,retrieval,replay,tool_error,memory,claim]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.7757,
+      "step_acc_ci95": [
+        0.7311,
+        0.8148
+      ],
+      "hit@3": 0.934,
+      "mrr": 0.8644,
+      "actor_acc": 0.7757,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 1.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.554
+      },
+      "ablation": "without calc"
+    },
+    {
+      "method": "evidence_verifier[plan,retrieval,replay,tool_error,memory,calc]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.8391,
+      "step_acc_ci95": [
+        0.7987,
+        0.8726
+      ],
+      "hit@3": 0.934,
+      "mrr": 0.896,
+      "actor_acc": 0.8391,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 1.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.45
+      },
+      "ablation": "without claim"
+    },
+    {
+      "method": "evidence_verifier[plan]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.1741,
+      "step_acc_ci95": [
+        0.1393,
+        0.2155
+      ],
+      "hit@3": 0.6491,
+      "mrr": 0.4288,
+      "actor_acc": 0.1741,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.038
+      },
+      "ablation": "only plan"
+    },
+    {
+      "method": "evidence_verifier[retrieval]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.2982,
+      "step_acc_ci95": [
+        0.2543,
+        0.346
+      ],
+      "hit@3": 0.7731,
+      "mrr": 0.5305,
+      "actor_acc": 0.2982,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.038
+      },
+      "ablation": "only retrieval"
+    },
+    {
+      "method": "evidence_verifier[replay]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.4591,
+      "step_acc_ci95": [
+        0.4096,
+        0.5094
+      ],
+      "hit@3": 0.8391,
+      "mrr": 0.6345,
+      "actor_acc": 0.4591,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 1.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.343
+      },
+      "ablation": "only replay"
+    },
+    {
+      "method": "evidence_verifier[tool_error]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.3483,
+      "step_acc_ci95": [
+        0.3021,
+        0.3976
+      ],
+      "hit@3": 0.6016,
+      "mrr": 0.5364,
+      "actor_acc": 0.3483,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.045
+      },
+      "ablation": "only tool_error"
+    },
+    {
+      "method": "evidence_verifier[memory]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.1741,
+      "step_acc_ci95": [
+        0.1393,
+        0.2155
+      ],
+      "hit@3": 0.6491,
+      "mrr": 0.4306,
+      "actor_acc": 0.1741,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.048
+      },
+      "ablation": "only memory"
+    },
+    {
+      "method": "evidence_verifier[calc]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.19,
+      "step_acc_ci95": [
+        0.1537,
+        0.2325
+      ],
+      "hit@3": 0.6016,
+      "mrr": 0.4203,
+      "actor_acc": 0.19,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.036
+      },
+      "ablation": "only calc"
+    },
+    {
+      "method": "evidence_verifier[claim]",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.1266,
+      "step_acc_ci95": [
+        0.0969,
+        0.1639
+      ],
+      "hit@3": 0.6016,
+      "mrr": 0.3886,
+      "actor_acc": 0.1266,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 0.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.044
+      },
+      "ablation": "only claim"
+    },
+    {
+      "method": "evidence_verifier",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.8391,
+      "step_acc_ci95": [
+        0.7987,
+        0.8726
+      ],
+      "hit@3": 0.934,
+      "mrr": 0.896,
+      "actor_acc": 0.8391,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 1.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.447
+      },
+      "ablation": "severity order (not earliest)"
+    }
+  ],
+  "gap2_observability": [
+    {
+      "method": "evidence_verifier",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.8391,
+      "step_acc_ci95": [
+        0.7987,
+        0.8726
+      ],
+      "hit@3": 0.934,
+      "mrr": 0.896,
+      "actor_acc": 0.8391,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 1.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.464
+      }
+    },
+    {
+      "method": "first_error_signal",
+      "view": "full",
+      "n": 379,
+      "step_acc": 0.3483,
+      "step_acc_ci95": [
+        0.3021,
+        0.3976
+      ],
+      "hit@3": 0.5383,
+      "mrr": 0.4746,
+      "actor_acc": 0.3483,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {}
+    },
+    {
+      "method": "evidence_verifier",
+      "view": "no_links",
+      "n": 379,
+      "step_acc": 0.8391,
+      "step_acc_ci95": [
+        0.7987,
+        0.8726
+      ],
+      "hit@3": 0.934,
+      "mrr": 0.896,
+      "actor_acc": 0.8391,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 1.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.435
+      }
+    },
+    {
+      "method": "first_error_signal",
+      "view": "no_links",
+      "n": 379,
+      "step_acc": 0.3483,
+      "step_acc_ci95": [
+        0.3021,
+        0.3976
+      ],
+      "hit@3": 0.5383,
+      "mrr": 0.4746,
+      "actor_acc": 0.3483,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {}
+    },
+    {
+      "method": "evidence_verifier",
+      "view": "no_inputs",
+      "n": 379,
+      "step_acc": 0.6781,
+      "step_acc_ci95": [
+        0.6295,
+        0.7231
+      ],
+      "hit@3": 0.8681,
+      "mrr": 0.7921,
+      "actor_acc": 0.6781,
+      "by_kind": {
+        "calc_error": {
+          "acc": 1.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.056
+      }
+    },
+    {
+      "method": "first_error_signal",
+      "view": "no_inputs",
+      "n": 379,
+      "step_acc": 0.3483,
+      "step_acc_ci95": [
+        0.3021,
+        0.3976
+      ],
+      "hit@3": 0.5383,
+      "mrr": 0.4746,
+      "actor_acc": 0.3483,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {}
+    },
+    {
+      "method": "evidence_verifier",
+      "view": "output_only",
+      "n": 379,
+      "step_acc": 0.6148,
+      "step_acc_ci95": [
+        0.5649,
+        0.6624
+      ],
+      "hit@3": 0.8681,
+      "mrr": 0.7604,
+      "actor_acc": 0.6148,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 1.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 1.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {
+        "calls": 0.0,
+        "prompt_tokens": 0.0,
+        "completion_tokens": 0.0,
+        "seconds": 0.053
+      }
+    },
+    {
+      "method": "first_error_signal",
+      "view": "output_only",
+      "n": 379,
+      "step_acc": 0.3483,
+      "step_acc_ci95": [
+        0.3021,
+        0.3976
+      ],
+      "hit@3": 0.5383,
+      "mrr": 0.4746,
+      "actor_acc": 0.3483,
+      "by_kind": {
+        "calc_error": {
+          "acc": 0.0,
+          "n": 24
+        },
+        "memory_swap": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "plan_omission": {
+          "acc": 0.0,
+          "n": 18
+        },
+        "retrieval_miss": {
+          "acc": 0.0,
+          "n": 65
+        },
+        "source_error": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_corruption": {
+          "acc": 0.0,
+          "n": 61
+        },
+        "tool_error": {
+          "acc": 1.0,
+          "n": 84
+        },
+        "unsupported_claim": {
+          "acc": 1.0,
+          "n": 48
+        }
+      },
+      "cost": {}
+    }
+  ],
+  "gap3_summaries": [
+    {
+      "method": "head_k",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.1003,
+      "fault_recall_ci95": [
+        0.0739,
+        0.1346
+      ],
+      "labelled_recall": 0.0,
+      "evidence_recall": 0.0,
+      "compression": 0.129,
+      "mean_tokens": 83.0,
+      "faithfulness": 1.0,
+      "budget": 4
+    },
+    {
+      "method": "tail_k",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.3166,
+      "fault_recall_ci95": [
+        0.2718,
+        0.3651
+      ],
+      "labelled_recall": 0.0,
+      "evidence_recall": 0.1488,
+      "compression": 0.0818,
+      "mean_tokens": 48.8,
+      "faithfulness": 1.0,
+      "budget": 4
+    },
+    {
+      "method": "random_k",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.2902,
+      "fault_recall_ci95": [
+        0.2468,
+        0.3379
+      ],
+      "labelled_recall": 0.0,
+      "evidence_recall": 0.2893,
+      "compression": 0.1123,
+      "mean_tokens": 71.1,
+      "faithfulness": 1.0,
+      "budget": 4
+    },
+    {
+      "method": "last_tool_results_k",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.6675,
+      "fault_recall_ci95": [
+        0.6186,
+        0.7131
+      ],
+      "labelled_recall": 0.0,
+      "evidence_recall": 0.9194,
+      "compression": 0.1417,
+      "mean_tokens": 92.4,
+      "faithfulness": 1.0,
+      "budget": 4
+    },
+    {
+      "method": "critical_trace",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.9024,
+      "fault_recall_ci95": [
+        0.8683,
+        0.9283
+      ],
+      "labelled_recall": 0.9024,
+      "evidence_recall": 0.2252,
+      "compression": 0.1566,
+      "mean_tokens": 98.2,
+      "faithfulness": 1.0,
+      "budget": 4
+    },
+    {
+      "method": "critical_trace[no_chain]",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.8391,
+      "fault_recall_ci95": [
+        0.7987,
+        0.8726
+      ],
+      "labelled_recall": 0.8391,
+      "evidence_recall": 0.126,
+      "compression": 0.1461,
+      "mean_tokens": 94.7,
+      "faithfulness": 1.0,
+      "budget": 4
+    },
+    {
+      "method": "head_k",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.3113,
+      "fault_recall_ci95": [
+        0.2668,
+        0.3597
+      ],
+      "labelled_recall": 0.0,
+      "evidence_recall": 0.2831,
+      "compression": 0.1914,
+      "mean_tokens": 122.2,
+      "faithfulness": 1.0,
+      "budget": 6
+    },
+    {
+      "method": "tail_k",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.4591,
+      "fault_recall_ci95": [
+        0.4096,
+        0.5094
+      ],
+      "labelled_recall": 0.0,
+      "evidence_recall": 0.2355,
+      "compression": 0.1408,
+      "mean_tokens": 85.8,
+      "faithfulness": 1.0,
+      "budget": 6
+    },
+    {
+      "method": "random_k",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.4116,
+      "fault_recall_ci95": [
+        0.3632,
+        0.4618
+      ],
+      "labelled_recall": 0.0,
+      "evidence_recall": 0.4174,
+      "compression": 0.1693,
+      "mean_tokens": 107.3,
+      "faithfulness": 1.0,
+      "budget": 6
+    },
+    {
+      "method": "last_tool_results_k",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.7784,
+      "fault_recall_ci95": [
+        0.7339,
+        0.8173
+      ],
+      "labelled_recall": 0.0,
+      "evidence_recall": 1.0,
+      "compression": 0.174,
+      "mean_tokens": 118.0,
+      "faithfulness": 1.0,
+      "budget": 6
+    },
+    {
+      "method": "critical_trace",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.934,
+      "fault_recall_ci95": [
+        0.9044,
+        0.9549
+      ],
+      "labelled_recall": 0.934,
+      "evidence_recall": 0.5269,
+      "compression": 0.2407,
+      "mean_tokens": 152.3,
+      "faithfulness": 1.0,
+      "budget": 6
+    },
+    {
+      "method": "critical_trace[no_chain]",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.8391,
+      "fault_recall_ci95": [
+        0.7987,
+        0.8726
+      ],
+      "labelled_recall": 0.8391,
+      "evidence_recall": 0.126,
+      "compression": 0.1679,
+      "mean_tokens": 109.2,
+      "faithfulness": 1.0,
+      "budget": 6
+    },
+    {
+      "method": "head_k",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.4908,
+      "fault_recall_ci95": [
+        0.4408,
+        0.5409
+      ],
+      "labelled_recall": 0.0,
+      "evidence_recall": 0.6054,
+      "compression": 0.2468,
+      "mean_tokens": 158.5,
+      "faithfulness": 1.0,
+      "budget": 8
+    },
+    {
+      "method": "tail_k",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.6069,
+      "fault_recall_ci95": [
+        0.5568,
+        0.6547
+      ],
+      "labelled_recall": 0.0,
+      "evidence_recall": 0.5062,
+      "compression": 0.1983,
+      "mean_tokens": 122.8,
+      "faithfulness": 1.0,
+      "budget": 8
+    },
+    {
+      "method": "random_k",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.5303,
+      "fault_recall_ci95": [
+        0.48,
+        0.58
+      ],
+      "labelled_recall": 0.0,
+      "evidence_recall": 0.5331,
+      "compression": 0.224,
+      "mean_tokens": 141.8,
+      "faithfulness": 1.0,
+      "budget": 8
+    },
+    {
+      "method": "last_tool_results_k",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.7784,
+      "fault_recall_ci95": [
+        0.7339,
+        0.8173
+      ],
+      "labelled_recall": 0.0,
+      "evidence_recall": 1.0,
+      "compression": 0.1773,
+      "mean_tokens": 120.9,
+      "faithfulness": 1.0,
+      "budget": 8
+    },
+    {
+      "method": "critical_trace",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 1.0,
+      "fault_recall_ci95": [
+        0.99,
+        1.0
+      ],
+      "labelled_recall": 1.0,
+      "evidence_recall": 0.8326,
+      "compression": 0.3118,
+      "mean_tokens": 201.6,
+      "faithfulness": 1.0,
+      "budget": 8
+    },
+    {
+      "method": "critical_trace[no_chain]",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.8391,
+      "fault_recall_ci95": [
+        0.7987,
+        0.8726
+      ],
+      "labelled_recall": 0.8391,
+      "evidence_recall": 0.126,
+      "compression": 0.1679,
+      "mean_tokens": 109.2,
+      "faithfulness": 1.0,
+      "budget": 8
+    },
+    {
+      "method": "raw_log",
+      "budget": "all",
+      "n": 379,
+      "fault_recall": 1.0,
+      "labelled_recall": "n/a",
+      "evidence_recall": 1.0,
+      "compression": 1.0,
+      "mean_tokens": 677.8,
+      "faithfulness": 1.0
+    }
+  ],
+  "gap3_views": [
+    {
+      "method": "critical_trace",
+      "view": "full",
+      "n": 379,
+      "fault_recall": 0.934,
+      "fault_recall_ci95": [
+        0.9044,
+        0.9549
+      ],
+      "labelled_recall": 0.934,
+      "evidence_recall": 0.5269,
+      "compression": 0.2407,
+      "mean_tokens": 152.3,
+      "faithfulness": 1.0,
+      "budget": 6
+    },
+    {
+      "method": "critical_trace",
+      "view": "no_links",
+      "n": 379,
+      "fault_recall": 0.8391,
+      "fault_recall_ci95": [
+        0.7987,
+        0.8726
+      ],
+      "labelled_recall": 0.8391,
+      "evidence_recall": 0.126,
+      "compression": 0.1679,
+      "mean_tokens": 109.2,
+      "faithfulness": 1.0,
+      "budget": 6
+    },
+    {
+      "method": "critical_trace",
+      "view": "no_inputs",
+      "n": 379,
+      "fault_recall": 0.8681,
+      "fault_recall_ci95": [
+        0.8303,
+        0.8985
+      ],
+      "labelled_recall": 0.8681,
+      "evidence_recall": 0.5062,
+      "compression": 0.2844,
+      "mean_tokens": 144.8,
+      "faithfulness": 1.0,
+      "budget": 6
+    },
+    {
+      "method": "critical_trace",
+      "view": "output_only",
+      "n": 379,
+      "fault_recall": 0.6148,
+      "fault_recall_ci95": [
+        0.5649,
+        0.6624
+      ],
+      "labelled_recall": 0.6148,
+      "evidence_recall": 0.0,
+      "compression": 0.171,
+      "mean_tokens": 89.3,
+      "faithfulness": 1.0,
+      "budget": 6
+    }
+  ],
+  "failure_analysis": {
+    "calc_error": {
+      "acc": 1.0,
+      "n": 24
+    },
+    "memory_swap": {
+      "acc": 1.0,
+      "n": 18
+    },
+    "plan_omission": {
+      "acc": 1.0,
+      "n": 18
+    },
+    "retrieval_miss": {
+      "acc": 1.0,
+      "n": 65
+    },
+    "source_error": {
+      "acc": 0.0,
+      "n": 61
+    },
+    "tool_corruption": {
+      "acc": 1.0,
+      "n": 61
+    },
+    "tool_error": {
+      "acc": 1.0,
+      "n": 84
+    },
+    "unsupported_claim": {
+      "acc": 1.0,
+      "n": 48
+    }
+  }
+}

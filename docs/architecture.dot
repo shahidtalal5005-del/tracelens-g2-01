@@ -1,0 +1,32 @@
+digraph G {
+  rankdir=LR; compound=true; fontname="Helvetica"; nodesep=0.35; ranksep=0.55; splines=true;
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11, fillcolor="#EAF1F8", color="#1F3A5F"];
+  edge [color="#5B6770", fontname="Helvetica", fontsize=9];
+
+  subgraph cluster_env { label="Environment (offline, deterministic)"; style="rounded,filled"; fillcolor="#F4F5F7"; color="#9AA3AB";
+    world [label="World\ndocuments + BM25 search\nread_doc, calc (replayable)"];
+    tasks [label="Task generator\nlookup / 2-hop / sum / compare\n(gold answer + gold evidence)"];
+    fault [label="Fault injector (8 kinds)\nlabel = critical event id", fillcolor="#FBEAEA", color="#B23B3B"];
+  }
+  subgraph cluster_agent { label="Instrumented agent (system under study)"; style="rounded,filled"; fillcolor="#E8F5EC"; color="#2E7D4F";
+    policy [label="Policy LLM\nscripted (offline) or Ollama/OpenAI"];
+    loop [label="Planner -> Retriever -> Reader ->\nMemory -> Calculator -> Answerer"];
+    rec [label="Recorder\nTrace schema v1\ncontent | inputs | parents", fillcolor="#FFF3E0", color="#C77700"];
+  }
+  g2 [label="G2  Observability views\nfull | no_links | no_inputs | output_only", fillcolor="#FFF3E0", color="#C77700"];
+  subgraph cluster_ext { label="Extraction"; style="rounded,filled"; fillcolor="#EEF2F7"; color="#1F3A5F";
+    base [label="BASELINES\nrandom / first / last / first-error\nLLM judges: all-at-once,\nstep-by-step, binary search", fillcolor="#F4F5F7", color="#5B6770"];
+    g1 [label="G1  Evidence verifier\nplan, retrieval, replay, tool_error,\nmemory, calc, claim rules\n(earliest violation = root cause)", fillcolor="#E6F3F1", color="#2A7F8E"];
+    g3 [label="G3  Critical-trace summariser\nbudgeted, event-linked quotes,\ndependency chain to the answer", fillcolor="#E6F3F1", color="#2A7F8E"];
+  }
+  eval [label="Evaluation\nstep acc / hit@3 / MRR / actor acc\nsummary recall, compression, faithfulness\nablations, 95% CIs"];
+  out [label="Outputs\nresults/*.md|json, gap_resolution_table.md,\nviewer.html"];
+  ww [label="Who&When adapter\n(base-paper data, run on laptop)", fillcolor="#F4F5F7", color="#9AA3AB", style="rounded,filled,dashed"];
+
+  tasks -> loop; world -> loop [label="tools"]; policy -> loop; fault -> loop [label="inject"];
+  loop -> rec; rec -> g2 [label="trace + hidden labels"];
+  g2 -> base; g2 -> g1; g2 -> g3; world -> g1 [label="replay", style=dashed];
+  g1 -> g3 [label="flagged events"];
+  base -> eval; g1 -> eval; g3 -> eval; ww -> g2 [style=dashed];
+  eval -> out;
+}
