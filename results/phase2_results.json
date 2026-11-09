@@ -338,7 +338,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.349
+        "seconds": 0.207
       }
     }
   ],
@@ -393,7 +393,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.279
+        "seconds": 0.144
       },
       "ablation": "without plan"
     },
@@ -447,7 +447,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.363
+        "seconds": 0.13
       },
       "ablation": "without retrieval"
     },
@@ -501,7 +501,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.065
+        "seconds": 0.025
       },
       "ablation": "without replay"
     },
@@ -555,7 +555,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.471
+        "seconds": 0.127
       },
       "ablation": "without tool_error"
     },
@@ -609,7 +609,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.445
+        "seconds": 0.162
       },
       "ablation": "without memory"
     },
@@ -663,7 +663,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.554
+        "seconds": 0.157
       },
       "ablation": "without calc"
     },
@@ -717,7 +717,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.45
+        "seconds": 0.136
       },
       "ablation": "without claim"
     },
@@ -771,7 +771,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.038
+        "seconds": 0.0
       },
       "ablation": "only plan"
     },
@@ -825,7 +825,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.038
+        "seconds": 0.0
       },
       "ablation": "only retrieval"
     },
@@ -879,7 +879,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.343
+        "seconds": 0.112
       },
       "ablation": "only replay"
     },
@@ -933,7 +933,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.045
+        "seconds": 0.0
       },
       "ablation": "only tool_error"
     },
@@ -987,7 +987,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.048
+        "seconds": 0.0
       },
       "ablation": "only memory"
     },
@@ -1041,7 +1041,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.036
+        "seconds": 0.0
       },
       "ablation": "only calc"
     },
@@ -1095,7 +1095,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.044
+        "seconds": 0.0
       },
       "ablation": "only claim"
     },
@@ -1149,7 +1149,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.447
+        "seconds": 0.128
       },
       "ablation": "severity order (not earliest)"
     }
@@ -1205,7 +1205,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.464
+        "seconds": 0.118
       }
     },
     {
@@ -1306,7 +1306,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.435
+        "seconds": 0.126
       }
     },
     {
@@ -1407,7 +1407,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.056
+        "seconds": 0.027
       }
     },
     {
@@ -1508,7 +1508,7 @@
         "calls": 0.0,
         "prompt_tokens": 0.0,
         "completion_tokens": 0.0,
-        "seconds": 0.053
+        "seconds": 0.028
       }
     },
     {
